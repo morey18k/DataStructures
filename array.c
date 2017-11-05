@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 typedef struct alist{
     int capacity;
     int size;
@@ -102,9 +103,14 @@ char get(int i, ArrayList * listy){
 }
 
 void printList(ArrayList*listy){
+    printf("[");
     for(int i=0;i<listy->size;i++){
-        printf("%c ",(listy->data)[i]);
+        if(i!=listy->size-1)
+            printf("%c, ",(listy->data)[i]);
+        else
+            printf("%c",(listy->data)[i]);
     }
+    printf("]");
     printf("\n");
 }
 void clearList(ArrayList*listy){
