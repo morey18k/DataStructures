@@ -50,10 +50,9 @@ void clear(Node ** current){
 }
 
 void printTree(Node * first, int depth){
-    if (first==NULL)
-        puts("");
+    if (first==NULL){}
     else{
-        printTree(first->right,depth+1);
+        printTree(first->right,depth+2);
         for(int k=0;k<depth;k++)
             printf("    ");
         printf("%c\n",first->datum);
