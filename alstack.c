@@ -51,10 +51,7 @@ void prepare(ArrayList *listy){
 void push(char letter,ArrayList *listy){
     proliferate(listy);
     listy->size++;
-    for (int k=listy->size-1;k>0;k--){
-        listy->data[k]=listy->data[k-1];
-    }
-    listy->data[0]=letter;
+    listy->data[listy->size-1]=letter;
 }
 
 void proliferate(ArrayList *listy){
