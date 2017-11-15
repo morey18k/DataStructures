@@ -26,10 +26,11 @@ int main(void) {
         print(list);
     }
     print(list);       
-    for(int i=0;i<=20;i++){
+    for(int i=10;i<=20;i++){
         pop(list);
         print(list);
     }
+    purge(list);
 }
 
 void print(Queue * list){

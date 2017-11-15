@@ -15,7 +15,7 @@ int main(void){
     srand(0);
     Node* first= NULL;
     
-    for(int i=0;i<30;i++){
+    for(int i=0;i<5;i++){
         create(&first,i+97);
     }
     printTree(first,0);
@@ -52,11 +52,23 @@ void clear(Node ** current){
 void printTree(Node * first, int depth){
     if (first==NULL){}
     else{
-        printTree(first->right,depth+2);
-        for(int k=0;k<depth;k++)
-            printf("    ");
-        printf("%c\n",first->datum);
-        printTree(first->left, depth+1);
+        if(first->right!=NULL){
+            printTree(first->right,depth+2);
+            for(int i=0;i<depth;i++){
+                printf(" ");
+            }
+            puts();
+        }
+        for(int k=0;k<depth-1;k++)
+            printf(" ");
+        printf("-%c\n",first->datum);
+        if(first->left!=NULL){
+            for(int i=0;i<depth;i++){
+                printf(" ");
+            }
+            puts("|");
+            printTree(first->left, depth+2);
+        }
     }
 }
 

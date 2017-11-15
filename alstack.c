@@ -25,7 +25,7 @@ int main (void){
         current=i+97;
         printList(listy);
     }
-    for (int i=0;i<=20;i++){
+    for (int i=10;i<=20;i++){
         current=pop(listy);
         printList(listy);
     }
