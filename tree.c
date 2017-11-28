@@ -57,7 +57,7 @@ void printTree(Node * first, int depth){
             for(int i=0;i<depth;i++){
                 printf(" ");
             }
-            puts();
+            puts("");
         }
         for(int k=0;k<depth-1;k++)
             printf(" ");
